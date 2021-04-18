@@ -17,11 +17,11 @@ def index():
     print(img_src)
     try:
         response = requests. get(img_src)
-        file = open("public/image.png", "wb")
+        file = open("image.png", "wb")
         file. write(response. content)
         file. close()
-        border_color = get_border_color('public/image.png')
-        dominant_color = get_dominant_color('public/image.png')
+        border_color = get_border_color('image.png')
+        dominant_color = get_dominant_color('image.png')
         obj = {
             "border_color": '#' + border_color,
             'dominant_color': '#' + dominant_color
